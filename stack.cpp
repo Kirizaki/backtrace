@@ -37,11 +37,11 @@ int main(int argc, char* argv[])
   
   char * c = (char*)'c';
   
-  Timer::Start("call_stack_timer");
+  Timer::Start("backtrace_timer");
   
   fooC(c);
   
-  Timer::Stop("call_stack_timer");
+  Timer::Stop("backtrace_timer");
   
   return 0;
 }
