@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include "parent.hpp"
-#include "stacktrace.hpp"
+#include "backtrace.hpp"
 
 Parent::Parent()
 {
@@ -13,8 +13,13 @@ void Parent::PublicParentFoo()
   ProtectedParentFoo();
 }
 
+void Parent::PublicStaticFoo()
+{
+  Backtrace bt;
+  std::cout << bt.ToString() << std::endl;
+}
+
 void Parent::ProtectedParentFoo()
 {
-  Stacktrace st;
-  std::cout << st.ToString() << std::endl;
+  PublicStaticFoo();
 }
