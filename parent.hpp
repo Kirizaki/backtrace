@@ -4,6 +4,7 @@ class Parent
   Parent();
   
   void PublicParentFoo();
+  static void PublicStaticFoo();
   
  private:
   void PrivateParentFoo();
